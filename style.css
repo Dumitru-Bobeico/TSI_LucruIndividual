@@ -1,0 +1,135 @@
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+    --color-light: white;
+    --color-dark: #212121;
+    --color-signal: #fab700;
+
+    --color-background: var(--color-light);
+    --color-text: var(--color-dark);
+    --color-accent: var(--color-signal);
+
+    --size-bezel: .5rem;
+    --size-radius: 4px;
+
+    line-height: 1.4;
+
+    font-family: 'Inter', sans-serif;
+    font-size: calc(.6rem + .4vw);
+    color: var(--color-text);
+    background: var(--color-background);
+    font-weight: 300;
+    padding: 0 calc(var(--size-bezel) * 3);
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    /* border-color: #your_custom_color; if needed */
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 900;
+}
+
+.custom-card {
+    background: var(--color-background);
+    padding: calc(4 * var(--size-bezel));
+    margin-top: calc(4 * var(--size-bezel));
+    border-radius: var(--size-radius);
+    border: 3px solid var(--color-shadow, currentColor);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, currentColor);
+}
+
+.slide-left {
+    animation: slide-left-animation 0.3s ease;
+}
+
+
+.custom-btn {
+    color: currentColor;
+    padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+    background: var(--color-accent);
+    border-radius: var(--size-radius);
+    font-weight: 900;
+}
+
+.custom-outline-btn {
+    color: currentColor;
+    padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+    background: var(--color-background);
+    border-radius: var(--size-radius);
+    font-weight: 900;
+}
+
+.answer {
+    display: flex;
+    flex-direction: row;
+}
+
+button+button {
+    margin-left: calc(var(--size-bezel) * 1);
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: calc(var(--size-bezel) * 2.5);
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes slide-left-animation {
+    from {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 0;
+    height: 0;
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+}
+
+input[type="radio"]+label {
+    display: inline-block;
+    padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+    background: var(--color-background);
+    color: currentColor;
+    border-radius: var(--size-radius);
+    font-weight: 900;
+    cursor: pointer;
+    border-color: #bbb #888 #888 #bbb;
+    border-style: solid;
+    border-width: 2px;
+    width: 100%;
+
+}
+
+input[type="radio"]+label:hover {
+    background: var(--color-accent);
+    border-color: #bbb #888 #888 #bbb;
+}
+
+input[type="radio"]+label:active {
+    background-color: var(--color-accent) !important;
+    border-color: #ccc !important;
+    color: currentColor !important;
+}
+
+input[type="radio"]:checked+label {
+    background: var(--color-accent);
+}
