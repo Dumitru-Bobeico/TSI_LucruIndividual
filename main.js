@@ -5,40 +5,48 @@ const questions = [
     'Are there procedures in place for regularly reviewing and updating security controls based on changes in the threat landscape or business environment?',
     'Is there a process for identifying, assessing, and managing information security risks associated with third-party relationships?',
     'Are employees provided with security awareness training to educate them about information security risks and best practices?',
-    'Is there a process for managing security incidents and breaches?',
-    'Are there controls in place to prevent unauthorized access to information systems and data?',
-    'Is there a system in place for monitoring and detecting security incidents within your organization\'s IT infrastructure?',
-    'Does your organization have a process for managing access rights to information systems and data?',
-    'Are there mechanisms for reporting security incidents and breaches, as well as procedures for responding to and mitigating their impact?',
-    'Does your organization have a business continuity plan in place to ensure the availability of critical information and IT systems in the event of a disruption?',
-    'Is there a process for regularly testing and reviewing the effectiveness of your organization\'s information security controls?',
-    'Is there a process for managing and securing third-party access to your organization\'s systems?',
-    'Does your organization have measures in place to protect against malware and unauthorized software installation?',
-    'Are system configurations regularly reviewed and updated to address security vulnerabilities?',
-    'Does your organization enforce strong password policies?',
-    'Does your organization conduct background checks on employees with access to sensitive information?',
-    'Are network security measures such as firewalls and intrusion detection systems implemented?',
-    'Are incidents of security breaches analyzed to prevent recurrence?',
-    'Whether the information is classified in terms of its value, legal requirements, sensitivity and criticality to the organization.',
-    'Whether an appropriate set of procedures are defined for information labelling and handling, in accordance with the classification scheme adopted by the organization.',
-    'Whether employee security roles and responsibilities, contractors and third party users were defined and documented in accordance with the organization\'s information security policy.',
-    'Confirmation of claimed academic and professional qualifications and independent identity checks',
-    'Users are asked to sign confidentiality or non- disclosure agreement as a part of their initial terms and conditions of the employment contract.',
-    'Whether this agreement covers the information security responsibility of the organization and the employee, third party users and contractors.',
-    'Whether all employees in the organization, and where relevant, contractors and third party users, receive appropriate security awareness training and regular updates in organizational policies and procedures as it pertains to their job function.',
-    'Whether a physical border security facility has been implemented to protect the information processing service. Some examples of such security facilities are card control entry gates, walls, manned reception, etc.',
-    'Whether entry controls are in place to allow only authorized personnel into various areas within the organization.',
-    'Whether the rooms, which have the information processing service, are locked or have lockable cabinets or safes.',
-    'Whether the physical protection against damage from fire, flood, earthquake, explosion, civil unrest and other forms of natural or man-made disaster should be designed and applied.',
-    'Whether there is any potential threat from neighbouring premises.',
-    'Where unauthorized persons may enter the premises are controlled, and information processing facilities are isolated. to avoid unauthorized access.',
     'Whether the equipment is protected from power failures and other disruptions caused by failures in supporting utilities.',
     'Whether the equipment is correctly maintained to ensure its continued availability and integrity.',
     'Whether such procedures are treated as formal documents, and therefore any changes made need management authorization.',
     'Whether duties and areas of responsibility are separated, in order to reduce opportunities for unauthorized modification or misuse of information, or services.',
     'Whether changes to provision of ser./ices, including maintaining and improving existing information security policies, procedures and controls, are managed.',
-    'Whether detection, prevention and recovery controls, to protect against malicious code and appropriate user awareness procedures, were developed and implemented.'
+    'Whether detection, prevention and recovery controls, to protect against malicious code and appropriate user awareness procedures, were developed and implemented.',
+    'Is there a process in place for securing remote access to organizational systems and data?',
+    'Are software patches and updates applied in a timely manner to address known security vulnerabilities?',
+    'Does your organization conduct regular security audits or assessments to identify weaknesses in the security infrastructure?',
+    'Is there a procedure for encrypting sensitive data both at rest and in transit?',
+    'Are there controls in place to prevent social engineering attacks, such as phishing?',
+    'Does your organization have a data breach response plan?',
+    'Are encryption keys managed securely to prevent unauthorized access to encrypted data?',
+    'Is there a policy for secure disposal of hardware and electronic media to prevent data breaches?',
+    'Are there restrictions on the use of removable media to prevent data leakage or malware infections?',
+    'Does your organization have a process for monitoring and controlling employee access to sensitive information?',
+    'Is multi-factor authentication implemented for accessing critical systems and data?',
+    'Are security incidents and breaches documented and analyzed to identify trends and improve security measures?',
+    'Is there a protocol for regularly reviewing and updating user access privileges based on changes in job roles or responsibilities?',
+    'Does your organization perform background checks on third-party vendors and contractors who have access to sensitive data or systems?',
+    'Are there procedures in place for securely disposing of outdated or unnecessary documentation containing sensitive information?',
+    'Is there a policy for regular data backup and recovery to mitigate the impact of data loss or system failures?',
+    'Are security awareness programs tailored to specific roles and responsibilities within the organization?',
+    'Does your organization provide secure channels for reporting potential security vulnerabilities or incidents?',
+    'Is there a process for reviewing and updating security policies and procedures in response to emerging threats or regulatory changes?',
+    'Are there controls in place to prevent data exfiltration and unauthorized data transfers?',
+    'Does your organization conduct regular penetration testing to assess the effectiveness of security controls?',
+    'Is there a protocol for responding to and recovering from ransomware attacks or other forms of cyber extortion?',
+    'Are incident response procedures tested through simulated exercises or drills?',
+    'Does your organization collaborate with industry peers or security forums to share threat intelligence and best practices?',
+    'Are there policies in place for secure remote work, including use of VPNs and secure Wi-Fi networks?',
+    'Does your organization conduct periodic reviews of user access logs to detect unauthorized access attempts?',
+    'Is there a mechanism for employees to report security concerns or incidents anonymously?',
+    'Are security controls and procedures reviewed and audited by independent third parties?',
+    'Does your organization have a process for evaluating and addressing security risks associated with emerging technologies, such as IoT devices or cloud services?',
+    'Is there a policy for secure coding practices to minimize vulnerabilities in custom-developed software?',
+    'Are there measures in place to protect against insider threats, such as employee misuse of privileges or data theft?',
+    'Does your organization maintain an inventory of all assets, including hardware, software, and data?',
+    'Is there a process for promptly applying security patches and updates to third-party software and dependencies?',
+    'Are security incidents and breaches communicated transparently to relevant stakeholders, including customers and regulatory authorities?'
 ];
+
 
 var answers = Array(questions.length).fill(0);
 var companyName;
@@ -54,6 +62,8 @@ const showCustomCard = () => {
     void customCard.offsetWidth;
     customCard.classList.add('slide-left');
 }
+
+
 
 start.addEventListener('click', function (e) {
     e.preventDefault();
